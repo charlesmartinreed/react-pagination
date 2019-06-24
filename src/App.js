@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Posts from "./components/Posts";
 import "./App.css";
 
 // on component mount, fetch posts
@@ -25,8 +26,9 @@ const App = () => {
 
   console.log(posts);
   return (
-    <div className="container">
-      <h1>Nothing much to see here... yet</h1>
+    <div className="container mt-5">
+      <h1 className="text-primary mb-3">Latest Posts</h1>
+      <Posts posts={posts} loading={loading} />
     </div>
   );
 };
